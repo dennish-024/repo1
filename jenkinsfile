@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/PNP-RIT/my_first_pro'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building..."
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Testing..."
+            }
+        }
+    }
+}
